@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag "admin_home" %>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="profile-image">
+      <% if @admin.profile_image.attached? %>
+        <%= image_tag @admin.profile_image %>
+      <% else %>
+        <%= image_tag("logo.png") %>
+      <% end %>
+    </div>
+    <div class="heading">
+      <h3>&nbsp <%= link_to "Welcome Admin", "/admins/#{@admin.id}" %> </h3>
+    </div>
+    <a href="/admins/edit" class="btn btn-primary" style="margin-left:auto; margin-right:10px;">Edit</a>
+    <%= link_to 'Sign out', destroy_admin_session_path,  data: {turbo_method: :delete} , class:"btn btn-primary" %>
+  </div>
+</div>
+</nav>

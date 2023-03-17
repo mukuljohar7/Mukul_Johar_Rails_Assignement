@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "profile_card" %>
+<style>
+  img{
+      height:120px;
+      width:120px;
+      border-radius:0%;
+      border:5px solid;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:20px;
+      margin-bottom:-40px
+  }
+</style>
+<div class="card">
+  <% if @student.profile_image.attached? %>
+    <%= image_tag @student.profile_image %>
+  <% else %>
+    <%= image_tag("logo.png") %>
+  <% end %>
+  <div class="card-body">
+    <div class="card-title">
+      <h4> Name: <%= @student.name %></h4>
+      <h4> Email: <%= @student.email %></h4>
+    </div>
+    <div class="button">
+      <%= link_to "Go back", :back  , class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>

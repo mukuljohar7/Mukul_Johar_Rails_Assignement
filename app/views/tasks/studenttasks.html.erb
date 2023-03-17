@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "task" %>
+<div style="margin-top:-60px;margin-left:20px">
+  <h1>Assigned tasks</h1>
+  <% @admins.each do |admin| %>
+    <div class="task">
+      <div class="task-body">
+        <h2>Assigned tasks by: <%= admin.name %></h2>
+        <% admin.tasks.each do |task| %>
+          <p><strong>Title: </strong><%= task.title %></p>
+          <p><strong>Tags: </strong><%= task.tags %></p>
+          <br />
+        <% end %>
+      </div>
+    </div>
+    <br />
+  <% end %>
+  <%= link_to "Go back" , :back, class:"btn btn-primary" %>
+</div>
+<br>
+<br>
+<br>

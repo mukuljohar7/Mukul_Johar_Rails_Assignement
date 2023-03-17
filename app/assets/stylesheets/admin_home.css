@@ -1,0 +1,35 @@
+.body{
+    margin-left: 10px;
+}
+
+.navbar{
+    background-image: linear-gradient(to right, rgb(145, 27, 255),rgb(174, 86, 255),rgb(215, 173, 255));
+    margin-top:-66px;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+    color:rgb(0, 0, 133)
+}
+
+.btn{
+    background-color: rgb(103, 103, 255);
+}
+
+table td{
+    padding:15px;
+}
+
+.heading h3{
+    margin-top: 5px;
+}
+
+.heading a{
+    text-decoration: none;
+    color:blue;
+}
+
+.heading a:hover{
+    color:rgb(0, 0, 213);
+}

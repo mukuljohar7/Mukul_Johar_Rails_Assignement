@@ -1,0 +1,7 @@
+<h1> Welcome Admin </h1>
+<% @admins.each do |admin| %>
+  <%= link_to "Go to students", home_admin_path(admin) %>
+<% end %>
+<br>
+<br>
+<%= link_to 'Sign out', destroy_admin_session_path,  data: {turbo_method: :delete} %>

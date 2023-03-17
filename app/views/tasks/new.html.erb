@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "new_task" %>
+<div class="card-new-task">
+  <div class="card-body-new-task">
+    <h5 class="card-title-new-task">New task</h5>
+    <p class="card-text-new-task">
+      <%= render "form", task: @task %>
+      <br>
+    </p>
+    <%= link_to "Back to tasks", "/home_admin/#{@admin.id}" , class:"btn btn-primary" %>
+  </div>
+</div>

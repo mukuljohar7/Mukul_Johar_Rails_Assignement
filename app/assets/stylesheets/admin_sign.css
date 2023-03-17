@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(0, 0, 255);
+}
+
+.card{
+    width:30%;
+    height:100%;
+    margin:auto;
+    margin-top: 6%;
+    margin-bottom: auto;
+    border: 5px solid;
+    box-shadow: 8px 10px #7c7b8e;
+}
+
+.card-body{
+    margin: auto;
+    margin-top:30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card-title{
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+.card-text{
+    margin-left: 80px;
+}
+
+.btn{
+    background-color: rgb(103, 103, 255);
+}
+
+.field .field{
+    background-color: rgb(196, 196, 255);
+    border:3px solid;
+    border-color: blue;
+}
+

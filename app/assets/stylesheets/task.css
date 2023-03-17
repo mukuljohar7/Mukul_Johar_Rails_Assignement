@@ -1,0 +1,17 @@
+.task{
+    border:5px solid;
+    width:500px;
+    padding:10px;
+    border-radius: 20px;
+    box-shadow: 8px 10px 5px 0px #7c7b8e;
+    background-color: rgb(176, 176, 255);
+}
+
+.task-body{
+    margin-top: 10px;
+}
+
+
+.btn{
+    background-color: rgb(103, 103, 255);
+}

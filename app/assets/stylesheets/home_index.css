@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(0, 0, 255);
+}
+
+.card{
+    width:500px;
+    height:250px;
+    margin:auto;
+    margin-top: 12%;
+    border: 5px solid;
+    box-shadow: 8px 10px #7c7b8e;
+}
+
+.card-body{
+    margin: auto;
+    margin-top:50px;
+    
+}
+
+.card-title{
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+.card-text{
+    margin-left: 80px;
+}
+
+.btn{
+    background-color: rgb(103, 103, 255);
+}

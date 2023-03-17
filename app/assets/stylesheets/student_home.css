@@ -1,0 +1,28 @@
+.btn{
+    background-color: rgb(103, 103, 255);
+}
+
+img{
+    height:40px;
+    width:40px;
+    border:1px solid;
+    border-radius:100%;
+}
+
+.navbar{
+    background-image: linear-gradient(to right, rgb(145, 27, 255),rgb(174, 86, 255),rgb(215, 173, 255));
+    margin-top:-66px;
+}
+
+.heading h3{
+    margin-top: 5px;
+}
+
+.heading a{
+    text-decoration: none;
+    color:blue;
+}
+
+.heading a:hover{
+    color:rgb(0, 0, 213);
+}

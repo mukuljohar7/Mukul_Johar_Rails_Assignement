@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "admin_home" %>
+<div style="margin-top:-60px;">
+  <%= render "header" %>
+</div>
+<br>
+<div class="body">
+  <div class="heading">
+    <h1>Welcome <%= @admin.name %></h1>
+  </div>
+  <% if @admin.students.any? %>
+    <p><%= link_to "Create new task", new_admin_task_path(@admin), class: "btn btn-primary" %>
+      <%= link_to "Show all tasks", admin_tasks_path(@admin), class: "btn btn-primary" %>
+    </p>
+    <div class="students">
+      <div class="students-heading">
+        <h3>Your students</h3>
+      </div>
+      <div class="students-list">
+        <table style="text-align: center">
+          <tbody>
+            <% @students.each do |student| %>
+              <tr>
+                <td>
+                  <% if student.profile_image.attached? %>
+                    <%= image_tag student.profile_image %>
+                  <% else %>
+                    <%= image_tag("logo.png") %>
+                  <% end %>
+                </td>
+                <td><%= student.name %></td>
+                <td><%= link_to "Student Info", student, class: "btn btn-primary" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <h2>No students yet</h2>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
