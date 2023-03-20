@@ -9,7 +9,7 @@
       <% end %>
     </div>
     <div class="heading">
-      <h3>&nbsp <%= link_to "Welcome Student", "/students/#{@students.id}" %> </h3>
+      <h3>&nbsp <%= link_to "Welcome Student", "/home_student/#{@students.id}/students" %> </h3>
     </div>
     <a href="/students/edit" class="btn btn-primary" style="margin-left:auto; margin-right:10px;">Edit</a>
     <%= link_to 'Sign out', destroy_student_session_path,  data: {turbo_method: :delete}, class:"btn btn-primary"%>

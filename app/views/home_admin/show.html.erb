@@ -28,7 +28,7 @@
                   <% end %>
                 </td>
                 <td><%= student.name %></td>
-                <td><%= link_to "Student Info", student, class: "btn btn-primary" %></td>
+                <td><%= link_to "Student Info", "/home_admin/#{@admin.id}/students/#{student.id}", class: "btn btn-primary" %></td>
               </tr>
             <% end %>
           </tbody>

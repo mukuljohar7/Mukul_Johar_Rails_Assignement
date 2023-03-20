@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+# rubocop:disable Style/FrozenStringLiteralComment, Style/StringLiterals, Lint/MissingCopEnableDirective
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present? # rubocop:disable Style/StringLiterals
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -83,7 +83,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger = ActiveSupport::Logger.new(STDOUT)
+    logger = ActiveSupport::Logger.new(STDOUT) # rubocop:disable Style/GlobalStdStream
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
@@ -91,3 +91,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
+# rubocop:enable Style/StringLiterals, Lint/MissingCopEnableDirective

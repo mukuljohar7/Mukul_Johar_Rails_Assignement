@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "tasks/edit"
   get "student/index"
   get "admin/index"
+  get "/home_student/:home_student_id/students", :to=> "students#homeshow"
+
   devise_for :students, controllers: { registrations: "students/registrations" }
   get "home_admin/index"
   devise_for :admins, controllers: { registrations: "admins/registrations" }
@@ -20,7 +22,11 @@ Rails.application.routes.draw do
   resources "home_admin" do
     resources "students"
   end
-  resources "home_student"
+  resources "home_student" do
+    resources "students"
+  end
+
+
   resources "students" do
     member do
       delete :purge_profile_image
