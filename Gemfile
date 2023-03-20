@@ -76,3 +76,17 @@ gem 'devise'
 gem "letter_opener"
 
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'
+
+gem 'rails_12factor'
+
+gem 'foreman'
+
+
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+end
+
