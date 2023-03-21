@@ -1,2 +1,20 @@
-<h1>Student#index</h1>
-<p>Find me in app/views/student/index.html.erb</p>
+<h1 style="margin-top:-60px;">All student List</h1>
+<div class="students-list">
+  <%= link_to "Go back",:back, class: "btn btn-primary" %>
+  <table style="text-align: center">
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td>
+            <% if student.profile_image.attached? %>
+              <%= image_tag student.profile_image %>
+            <% else %>
+              <%= image_tag("logo.png") %>
+            <% end %>
+          </td>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+        <% end %>
+      </tbody>
+    </table>
+  </div>

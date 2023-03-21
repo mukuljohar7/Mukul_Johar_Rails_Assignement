@@ -7,14 +7,17 @@
   <div class="heading">
     <h1>Welcome <%= @admin.name %></h1>
   </div>
+  <%= link_to "Show All students", home_admin_students_path(@admin), class: "btn btn-primary" %>
+  <br>
+  <br>
+  <div class="students-heading">
+    <h3>Your students</h3>
+  </div>
   <% if @admin.students.any? %>
     <p><%= link_to "Create new task", new_admin_task_path(@admin), class: "btn btn-primary" %>
       <%= link_to "Show all tasks", admin_tasks_path(@admin), class: "btn btn-primary" %>
     </p>
     <div class="students">
-      <div class="students-heading">
-        <h3>Your students</h3>
-      </div>
       <div class="students-list">
         <table style="text-align: center">
           <tbody>

@@ -1,5 +1,8 @@
 class StudentsController < ApplicationController
-  def index; end
+  def index
+    @students=Student.all
+    @admin=Admin.find(params[:home_admin_id])
+  end
 
   def show
     @admin = Admin.find(params[:home_admin_id])

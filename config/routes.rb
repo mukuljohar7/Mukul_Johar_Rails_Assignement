@@ -27,17 +27,11 @@ Rails.application.routes.draw do
   end
 
 
-  resources "students" do
-    member do
-      delete :purge_profile_image
-    end
-  end
+  resources "students" 
+  
   resources "home"
   resources "admins" do
     resources "tasks"
-    member do
-      delete :purge_profile_image
-    end
   end
   resources "tasks"
 end
